@@ -1,0 +1,209 @@
+/* 
+===================================================================
+Elements
+===================================================================
+*/
+
+/* 
+===================================================================
+Typography
+===================================================================
+*/
+
+body {
+    font-family: var(--font-family);
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+/* 
+===================================================================
+Layout
+===================================================================
+*/
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-bg);
+    background-image: image(src="./logo_1680012188485.png");
+    color: var(--primary-text);
+}
+
+.site-wrapper {
+    max-width: 30rem;
+    width: 100%;
+    margin: 5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.site-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* 
+===================================================================
+Components
+===================================================================
+*/
+
+/* Header + Section */
+
+.header,
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Header Logo */
+
+.header-logo {
+    border-radius: 100%;
+    width: 8rem;
+    height: 8rem;
+    margin: auto;
+    background-color: var(--logo-bg);
+    border-color: var(--logo-outline);
+    border-style: solid;
+    border-width: 2px;
+}
+
+/* 56.25rem === 900px */
+
+@media (min-width: 56.25rem) {
+    .header-logo {
+        width: 12rem;
+        height: 12rem;
+    }
+}
+
+/* Header Text */
+
+.header-text {
+    text-align: center;
+}
+
+.header-text .title {
+    font-size: 1.5rem;
+    word-break: break-word;
+}
+
+.header-text .subtitle {
+    font-size: 1rem;
+    word-break: break-word;
+}
+
+/* Link List */
+
+.link-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.link-list-item>a {
+    display: block;
+    position: relative;
+    padding: 1rem 3.5rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    text-align: center;
+    background: var(--secondary-bg);
+    color: var(--secondary-text);
+    border-color: var(--secondary-outline);
+    border-style: solid;
+    border-width: 1px;
+    min-height: 3.75rem;
+}
+
+.link-list-item>a:hover {
+    background: var(--secondary-bg-hover);
+    color: var(--secondary-text-hover);
+    border-color: var(--secondary-outline-hover);
+}
+
+.link-list-item>a:hover .icon {
+    color: var(--secondary-icon-hover);
+}
+
+.link-list-item .icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 1rem;
+    color: var(--secondary-icon);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-list-item .icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Address */
+
+.address {
+    font-style: normal;
+    text-align: center;
+    max-width: 20rem;
+    margin: auto;
+}
+
+/* LOGO.com Footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-footer {
+    padding: 0.75rem 1.25rem;
+    border-radius: 5rem;
+    font-size: 0.75rem;
+    background: var(--secondary-bg);
+    color: var(--secondary-text);
+    border-color: var(--secondary-outline);
+    border-style: solid;
+    border-width: 1px;
+    text-decoration: none;
+}
+
+.logo-footer:hover {
+    background: var(--secondary-bg-hover);
+    color: var(--secondary-text-hover);
+    border-color: var(--secondary-outline-hover);
+}
+
+.one-page-link {
+    text-decoration: underline;
+    color: var(--primary-text);
+    font-size: 0.625rem;
+}
